@@ -1,0 +1,31 @@
+﻿@model DogApp.Models.AboutModel // Replace DogApp with your actual project name
+
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>About Me</h1>
+            <p><strong>Full Name:</strong> @Model.FullName</p>
+            <p><strong>Expected Graduation:</strong> @Model.ExpectedGraduation</p>
+            <p><strong>Hardest Concept:</strong> @Model.HardestConcept</p>
+            <p><strong>Easiest Concept:</strong> @Model.EasiestConcept</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <h3>My Picture</h3>
+            <img src="@Model.ImageUrl" class="img-fluid rounded-circle shadow" alt="Profile Picture" />
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3>My Favorite Food</h3>
+            <p>@Model.FavoriteFood</p>
+            <img src="@Model.FavoriteFoodImageUrl" class="img-fluid rounded shadow" alt="Favorite Food" />
+        </div>
+    </div>
+</div>
